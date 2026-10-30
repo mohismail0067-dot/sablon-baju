@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>'SablonKita' - Pemesanan Sablon Baju</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h2>Sablon<span>Kita</span></h2>
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#katalog">Katalog</a>
+        <a href="#pesan">Pemesanan</a>
+        <a href="#daftar">Daftar Pesanan</a>
+    </nav>
+</header>
+
+<section class="hero" id="beranda">
+    <div>
+        <p class="label">SABLON BAJU CUSTOM</p>
+        <h1>Bikin Kaos Custom<br>
+            <span>Sesuai Gayamu!</span>
+        </h1>
+        <p>Sablon berkualitas untuk komunitas, usaha,
+        acara, dan kebutuhan pribadi.</p>
+        <a class="tombol" href="#katalog">Lihat Katalog</a>
+    </div>
+    <div class="gambar-kaos">
+        <div class="kaos">GOOD<br>VIBES</div>
+    </div>
+</section>
+
+<section class="keunggulan">
+    <div>
+        <h3>Sablon Berkualitas</h3>
+        <p>Hasil sablon tajam dan awet.</p>
+    </div>
+    <div>
+        <h3>Harga Terjangkau</h3>
+        <p>Harga sesuai kualitas produk.</p>
+    </div>
+    <div>
+        <h3>Pengerjaan Cepat</h3>
+        <p>Produksi rapi dan tepat waktu.</p>
+    </div>
+</section>
+
+<section class="bagian" id="katalog">
+    <p class="label">PRODUK KAMI</p>
+    <h2>Produk Favorit</h2>
+    <p>Pilih produk sesuai kebutuhan Anda.</p>
+
+    <div class="katalog">
+        <div class="kartu">
+            <div class="ikon-produk">👕</div>
+            <h3>Kaos Polos</h3>
+            <p>Cocok untuk kegiatan sehari-hari.</p>
+            <h4>Rp35.000</h4>
+            <button onclick="pilihProduk('Kaos Polos')">
+                Pilih Produk
+            </button>
+        </div>
+
+        <div class="kartu">
+            <div class="ikon-produk">👕</div>
+            <h3>Kaos Sablon Custom</h3>
+            <p>Desain sesuai keinginan Anda.</p>
+            <h4>Rp55.000</h4>
+            <button onclick="pilihProduk('Kaos Sablon Custom')">
+                Pilih Produk
+            </button>
+        </div>
+
+        <div class="kartu">
+            <div class="ikon-produk">🧥</div>
+            <h3>Hoodie Custom</h3>
+            <p>Hoodie dengan desain pilihan.</p>
+            <h4>Rp120.000</h4>
+            <button onclick="pilihProduk('Hoodie Custom')">
+                Pilih Produk
+            </button>
+        </div>
+    </div>
+</section>
+
+<section class="pemesanan" id="pesan">
+    <div class="info">
+        <p class="label">PESAN SEKARANG</p>
+        <h2>Formulir Pemesanan</h2>
+        <p>Isi data dengan benar untuk melakukan
+        pemesanan produk sablon.</p>
+    </div>
+
+    <form id="formPesanan">
+        <label>Nama Pelanggan</label>
+        <input type="text" id="nama"
+               placeholder="Masukkan nama Anda" required>
+
+        <label>Nomor WhatsApp</label>
+        <input type="tel" id="whatsapp"
+               placeholder="Masukan nomor anda" required>
+
+        <label>Jenis Produk</label>
+        <select id="produk" required>
+            <option value="">Pilih produk</option>
+            <option value="Kaos Polos">Kaos Polos</option>
+            <option value="Kaos Sablon Custom">
+                Kaos Sablon Custom
+            </option>
+            <option value="Hoodie Custom">Hoodie Custom</option>
+        </select>
+
+        <label>Jumlah Pesanan</label>
+        <input type="number" id="jumlah"
+               min="1" value="1" required>
+
+        <label>Catatan Desain</label>
+        <textarea id="catatan"
+                  placeholder="Tuliskan warna, ukuran, atau desain"></textarea>
+
+        <div class="total">
+            <span>Estimasi Harga</span>
+            <strong id="total">Rp0</strong>
+        </div>
+
+        <button type="submit">Kirim Pesanan</button>
+    </form>
+</section>
+
+<section class="bagian" id="daftar">
+    <p class="label">ADMINISTRASI</p>
+    <h2>Daftar Pesanan</h2>
+
+    <div class="tabel-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama</th>
+                    <th>WhatsApp</th>
+                    <th>Produk</th>
+                    <th>Jumlah</th>
+                    <th>Total Harga</th>
+                    <th>Catatan</th>
+                </tr>
+            </thead>
+            <tbody id="tabelPesanan">
+                <tr>
+                    <td colspan="7">Belum ada pesanan.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer>
+    <h3>Sablon<span>Kita</span></h3>
+    <p>Custom T-shirt, Custom Story.</p>
+    <p>&copy; 2026 SablonKita</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
